@@ -202,6 +202,8 @@ GameObject:
   - component: {fileID: 2309271553337757121}
   - component: {fileID: 6511347766603644600}
   - component: {fileID: 2309271554254085548}
+  - component: {fileID: 6736624004881171356}
+  - component: {fileID: 5710982225180412159}
   m_Layer: 0
   m_Name: _rigtest_prefab
   m_TagString: Untagged
@@ -267,7 +269,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 07fe995bc86277e4f981639785d02923, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 00bc7abeee0c4b945afbf0797b6e9daf, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -312,8 +314,8 @@ MonoBehaviour:
   - {fileID: 1652590780519138482}
   - {fileID: 46485233953712864}
   m_Bounds:
-    m_Center: {x: 0.0973264, y: -0.06627703, z: 0}
-    m_Extent: {x: 1.21514, y: 1.3206227, z: 0}
+    m_Center: {x: 0.09732652, y: -0.066277266, z: 0}
+    m_Extent: {x: 1.2151401, y: 1.3206232, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -337,6 +339,36 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &6736624004881171356
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2309271553337757123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c29cff538c195c249b69c6f2236de67b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Library: []
+  m_SpriteLibraryAsset: {fileID: 7108339969198208228, guid: a24ac4e6b58304e4c813a619fe7462b3, type: 3}
+--- !u!114 &5710982225180412159
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2309271553337757123}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed8b1ae4e4e52b34ea557c1c11e076fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_CategoryHash: 0
+  m_labelHash: 0
+  m_SpriteKey: 0
+  m_SpriteHash: 179428433
 --- !u!1 &2309271553949773332
 GameObject:
   m_ObjectHideFlags: 0
