@@ -31,6 +31,7 @@ public class PlayerInput : MonoBehaviour
         input.Movement.performed += ctx =>
         {
             inputState.movementDirection = ctx.ReadValue<Vector2>();
+            onInputStateChanged?.Invoke(inputState);
         };
         //Jump
         input.Jump.performed += _ =>
