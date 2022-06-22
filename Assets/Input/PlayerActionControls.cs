@@ -46,9 +46,9 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""Crouch"",
+                    ""name"": ""Run"",
                     ""type"": ""Button"",
-                    ""id"": ""c2ae15f1-e4bf-4bf4-be82-85ca17dfade7"",
+                    ""id"": ""8b48d805-7e25-42af-aab9-b4ef56e87d87"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -58,6 +58,24 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""name"": ""Interact"",
                     ""type"": ""Button"",
                     ""id"": ""8501ddc9-094c-41af-baed-305f4865128b"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ability1"",
+                    ""type"": ""Button"",
+                    ""id"": ""7f282d3f-770a-40fd-b2b9-059268c9ce16"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Ability2"",
+                    ""type"": ""Button"",
+                    ""id"": ""7e41e170-629a-4e31-86fa-e781ecc0f436"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -186,17 +204,6 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 },
                 {
                     ""name"": """",
-                    ""id"": ""a719ffa0-e3ea-43ba-b49a-4b4d3c723d75"",
-                    ""path"": ""<Keyboard>/w"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Jump"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
                     ""id"": ""61bf71d6-f71c-491b-b948-fe6a43818ac4"",
                     ""path"": ""<Gamepad>/buttonSouth"",
                     ""interactions"": """",
@@ -214,28 +221,6 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Jump"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""136a1e24-540f-421b-acdb-36c2d8ce4b6b"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": ""Press"",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Crouch"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""1a0cce98-9b17-4624-acbd-866b5fa1114b"",
-                    ""path"": ""<Gamepad>/leftStick/down"",
-                    ""interactions"": ""Press"",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Crouch"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -293,6 +278,72 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                     ""action"": ""Pause"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""472b64fc-8603-474d-a085-0f2554e192c8"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ability1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""62dbb1d2-0f76-4c79-95c5-6d5482f52106"",
+                    ""path"": ""<Gamepad>/rightTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ability1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""70261391-b572-4f04-8592-f479bd95e03f"",
+                    ""path"": ""<Keyboard>/shift"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Run"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b9b96284-5f7b-488b-b89a-1e9538026827"",
+                    ""path"": ""<Gamepad>/buttonEast"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Run"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""34002fe2-50a9-4a6c-92b2-be988a019c49"",
+                    ""path"": ""<Mouse>/rightButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ability2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""85df3f25-ce40-4882-971e-3f7eab4ac75b"",
+                    ""path"": ""<Gamepad>/rightShoulder"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Ability2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -303,8 +354,10 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
         m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
-        m_Player_Crouch = m_Player.FindAction("Crouch", throwIfNotFound: true);
+        m_Player_Run = m_Player.FindAction("Run", throwIfNotFound: true);
         m_Player_Interact = m_Player.FindAction("Interact", throwIfNotFound: true);
+        m_Player_Ability1 = m_Player.FindAction("Ability1", throwIfNotFound: true);
+        m_Player_Ability2 = m_Player.FindAction("Ability2", throwIfNotFound: true);
         m_Player_Pause = m_Player.FindAction("Pause", throwIfNotFound: true);
     }
 
@@ -367,8 +420,10 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
     private IPlayerActions m_PlayerActionsCallbackInterface;
     private readonly InputAction m_Player_Movement;
     private readonly InputAction m_Player_Jump;
-    private readonly InputAction m_Player_Crouch;
+    private readonly InputAction m_Player_Run;
     private readonly InputAction m_Player_Interact;
+    private readonly InputAction m_Player_Ability1;
+    private readonly InputAction m_Player_Ability2;
     private readonly InputAction m_Player_Pause;
     public struct PlayerActions
     {
@@ -376,8 +431,10 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
         public PlayerActions(@PlayerActionControls wrapper) { m_Wrapper = wrapper; }
         public InputAction @Movement => m_Wrapper.m_Player_Movement;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
-        public InputAction @Crouch => m_Wrapper.m_Player_Crouch;
+        public InputAction @Run => m_Wrapper.m_Player_Run;
         public InputAction @Interact => m_Wrapper.m_Player_Interact;
+        public InputAction @Ability1 => m_Wrapper.m_Player_Ability1;
+        public InputAction @Ability2 => m_Wrapper.m_Player_Ability2;
         public InputAction @Pause => m_Wrapper.m_Player_Pause;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
@@ -394,12 +451,18 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 @Jump.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Jump.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
                 @Jump.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnJump;
-                @Crouch.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCrouch;
-                @Crouch.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCrouch;
-                @Crouch.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnCrouch;
+                @Run.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRun;
+                @Run.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRun;
+                @Run.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnRun;
                 @Interact.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
                 @Interact.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
                 @Interact.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnInteract;
+                @Ability1.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAbility1;
+                @Ability1.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAbility1;
+                @Ability1.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAbility1;
+                @Ability2.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAbility2;
+                @Ability2.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAbility2;
+                @Ability2.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnAbility2;
                 @Pause.started -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
                 @Pause.performed -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
                 @Pause.canceled -= m_Wrapper.m_PlayerActionsCallbackInterface.OnPause;
@@ -413,12 +476,18 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
                 @Jump.started += instance.OnJump;
                 @Jump.performed += instance.OnJump;
                 @Jump.canceled += instance.OnJump;
-                @Crouch.started += instance.OnCrouch;
-                @Crouch.performed += instance.OnCrouch;
-                @Crouch.canceled += instance.OnCrouch;
+                @Run.started += instance.OnRun;
+                @Run.performed += instance.OnRun;
+                @Run.canceled += instance.OnRun;
                 @Interact.started += instance.OnInteract;
                 @Interact.performed += instance.OnInteract;
                 @Interact.canceled += instance.OnInteract;
+                @Ability1.started += instance.OnAbility1;
+                @Ability1.performed += instance.OnAbility1;
+                @Ability1.canceled += instance.OnAbility1;
+                @Ability2.started += instance.OnAbility2;
+                @Ability2.performed += instance.OnAbility2;
+                @Ability2.canceled += instance.OnAbility2;
                 @Pause.started += instance.OnPause;
                 @Pause.performed += instance.OnPause;
                 @Pause.canceled += instance.OnPause;
@@ -430,8 +499,10 @@ public partial class @PlayerActionControls : IInputActionCollection2, IDisposabl
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
-        void OnCrouch(InputAction.CallbackContext context);
+        void OnRun(InputAction.CallbackContext context);
         void OnInteract(InputAction.CallbackContext context);
+        void OnAbility1(InputAction.CallbackContext context);
+        void OnAbility2(InputAction.CallbackContext context);
         void OnPause(InputAction.CallbackContext context);
     }
 }
