@@ -42,7 +42,7 @@ public class PlayerMover : MonoBehaviour
         {
             if (vel.y > 0)
             {
-                vel.y = 0;
+                vel.y *= -1;
             }
         }
         rb2d.velocity = vel;
