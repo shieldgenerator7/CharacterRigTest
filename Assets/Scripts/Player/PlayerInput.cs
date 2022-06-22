@@ -14,7 +14,7 @@ public class PlayerInput : MonoBehaviour
 
     private InputState inputState;
     public delegate void OnInputStateChanged(InputState inputState);
-    public static event OnInputStateChanged onInputStateChanged;
+    public event OnInputStateChanged onInputStateChanged;
 
     //-----------------
 
