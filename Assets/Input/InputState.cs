@@ -12,4 +12,9 @@ public struct InputState
     public bool interact;
     public bool ability1;
     public bool ability2;
+
+    public override string ToString()
+    {
+        return $"move: {movementDirection}, jump: {jump}, run: {run},";
+    }
 }

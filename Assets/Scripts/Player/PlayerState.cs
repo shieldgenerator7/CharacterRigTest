@@ -47,4 +47,9 @@ public struct PlayerState
         FERAL,
     }
     public Form form;
+
+    public override string ToString()
+    {
+        return $"move: {moveDirection}, running: {running}, jumping: {jumping}, grounded: {grounded}, form: {form}";
+    }
 }
