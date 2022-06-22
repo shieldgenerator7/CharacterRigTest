@@ -54,7 +54,7 @@ public class PlayerController : MonoBehaviour
     ///TODO: move to some other script, perhaps the environment state updater one
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.contacts[0].point.y < transform.position.y)
+        if (collision.contacts.Length > 0 && collision.contacts[0].point.y < transform.position.y)
         {
             playerState.grounded = true;
             onPlayerStateChanged?.Invoke(playerState);
@@ -62,7 +62,7 @@ public class PlayerController : MonoBehaviour
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.contacts[0].point.y < transform.position.y)
+        if (collision.contacts.Length == 0 || collision.contacts[0].point.y < transform.position.y)
         {
             playerState.grounded = false;
             onPlayerStateChanged?.Invoke(playerState);

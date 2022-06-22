@@ -4,8 +4,10 @@ using UnityEngine;
 
 public class PlayerMover : MonoBehaviour
 {
-    public PlayerAttributes attributes;
+    public PlayerAttributes attributesAnthro;
+    public PlayerAttributes attributesFeral;
 
+    private PlayerAttributes attributes;
     private Rigidbody2D rb2d;
 
     // Start is called before the first frame update
@@ -16,6 +18,19 @@ public class PlayerMover : MonoBehaviour
 
     public void processPlayerState(PlayerState playerState)
     {
+        //Transform
+        if (playerState.grounded)
+        {
+            if (playerState.form == PlayerState.Form.ANTHRO)
+            {
+                attributes = attributesAnthro;
+            }
+            if (playerState.form == PlayerState.Form.FERAL)
+            {
+                attributes = attributesFeral;
+            }
+        }
+        //Movement
         Vector2 vel = rb2d.velocity;
         vel.x = playerState.moveDirection
             * ((playerState.running) ? attributes.runSpeed : attributes.walkSpeed);
