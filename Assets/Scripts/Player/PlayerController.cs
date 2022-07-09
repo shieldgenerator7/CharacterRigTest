@@ -13,6 +13,8 @@ public class PlayerController : MonoBehaviour
         //Movement
         playerState.moveDirection = inputState.movementDirection.x;
         playerState.running = inputState.run;
+        //Look Direction
+        playerState.lookDirection = inputState.lookDirection;
         //Jumping
         if (playerState.jumping != inputState.jump)
         {

@@ -6,6 +6,9 @@ public class PlayerAnimator : MonoBehaviour
 {
     public Animator animator;
     public PlayerController playerController;
+    public Transform center;
+    public Transform bowHand;
+    public float bowHandDistance = 2;
 
     // Start is called before the first frame update
     void Start()
@@ -25,5 +28,7 @@ public class PlayerAnimator : MonoBehaviour
             scale.x = Mathf.Abs(scale.x) * playerState.moveDirection;
             playerController.transform.localScale = scale;
         }
+        //Aiming
+        bowHand.position = (Vector2)center.position + (playerState.lookDirection * bowHandDistance);
     }
 }

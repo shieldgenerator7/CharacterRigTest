@@ -10,6 +10,8 @@ using static PlayerActionControls;
 
 public class PlayerInput : MonoBehaviour
 {
+    public Transform center;
+
     private PlayerActionControls playerActionControls;
 
     private InputState inputState;
@@ -93,6 +95,21 @@ public class PlayerInput : MonoBehaviour
     private void OnDisable()
     {
         playerActionControls.Disable();
+    }
+
+    private void Update()
+    {
+        Vector2 prevLookDirection = inputState.lookDirection;
+        Vector3 mousePos = Mouse.current.position.ReadValue();
+        //mousePos.z = Camera.main.nearClipPlane;
+        Vector2 lookPosition = Camera.main.ScreenToWorldPoint(mousePos);
+
+        inputState.lookDirection = (lookPosition - (Vector2)center.position).normalized;
+
+        if (inputState.lookDirection != prevLookDirection)
+        {
+            onInputStateChanged?.Invoke(inputState);
+        }
     }
 
 }

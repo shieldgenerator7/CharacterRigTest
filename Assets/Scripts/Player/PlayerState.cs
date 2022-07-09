@@ -9,6 +9,10 @@ public struct PlayerState
     /// </summary>
     public float moveDirection;
     /// <summary>
+    /// The vector the bow and arrow is pointing
+    /// </summary>
+    public Vector2 lookDirection;
+    /// <summary>
     /// True: the player intends to go fast
     /// </summary>
     public bool running;
