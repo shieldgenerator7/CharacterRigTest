@@ -22,10 +22,11 @@ public class PlayerAnimator : MonoBehaviour
         //Anthro/Feral form
         animator.SetBool("feral", playerState.form == PlayerState.Form.FERAL);
         //Flip X
-        if (playerState.moveDirection != 0)
+        float lookDirection = playerState.lookDirection.x;
+        if (lookDirection != 0)
         {
             Vector3 scale = playerController.transform.localScale;
-            scale.x = Mathf.Abs(scale.x) * playerState.moveDirection;
+            scale.x = Mathf.Abs(scale.x) * Mathf.Sign(lookDirection);
             playerController.transform.localScale = scale;
         }
         //Aiming
