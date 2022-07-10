@@ -101,8 +101,7 @@ public class PlayerInput : MonoBehaviour
     {
         Vector2 prevLookDirection = inputState.lookDirection;
         Vector3 mousePos = Mouse.current.position.ReadValue();
-        //mousePos.z = Camera.main.nearClipPlane;
-        Vector2 lookPosition = Camera.main.ScreenToWorldPoint(mousePos);
+        Vector2 lookPosition = Utility.ScreenToWorldPoint(mousePos);
 
         inputState.lookDirection = (lookPosition - (Vector2)center.position).normalized;
 
