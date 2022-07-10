@@ -6,9 +6,12 @@ public class PlayerAnimator : MonoBehaviour
 {
     public Animator animator;
     public PlayerController playerController;
+    [Header("Bow Pieces")]
     public Transform center;
-    public Transform bowHand;
+    public Transform rightBowHand;
+    public Transform leftBowHand;
     public float bowHandDistance = 2;
+    public float arrowHandDistance = -0.1f;
 
     // Start is called before the first frame update
     void Start()
@@ -31,6 +34,9 @@ public class PlayerAnimator : MonoBehaviour
             playerController.transform.localScale = scale;
         }
         //Aiming
+        Transform bowHand = (lookDirection > 0) ? leftBowHand : rightBowHand;
+        Transform arrowHand = (lookDirection > 0) ? rightBowHand : leftBowHand;
         bowHand.position = (Vector2)center.position + (playerState.lookDirection * bowHandDistance);
+        arrowHand.position = (Vector2)center.position + (playerState.lookDirection * arrowHandDistance);
     }
 }
