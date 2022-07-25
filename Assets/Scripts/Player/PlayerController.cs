@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    public float coyoteTime = 0.1f;
+
     private PlayerState playerState;
     public delegate void OnPlayerStateChanged(PlayerState playerState);
     public event OnPlayerStateChanged onPlayerStateChanged;
@@ -36,7 +38,7 @@ public class PlayerController : MonoBehaviour
         if (playerState.jumping != inputState.jump)
         {
             if (!playerState.jumping && inputState.jump
-                && playerState.grounded
+                && (playerState.grounded || Time.time <= playerState.lastGroundTime + coyoteTime)
                 && !playerState.jumpConsumed
                 )
             {
@@ -84,6 +86,7 @@ public class PlayerController : MonoBehaviour
         if (collision.contacts.Length > 0 && collision.contacts[0].point.y < transform.position.y)
         {
             playerState.grounded = true;
+            playerState.lastGroundTime = Time.time;
             onPlayerStateChanged?.Invoke(playerState);
         }
     }
@@ -92,6 +95,7 @@ public class PlayerController : MonoBehaviour
         if (collision.contacts.Length == 0 || collision.contacts[0].point.y < transform.position.y)
         {
             playerState.grounded = false;
+            playerState.lastGroundTime = Time.time;
             onPlayerStateChanged?.Invoke(playerState);
         }
     }

@@ -29,6 +29,7 @@ public struct PlayerState
     /// True: on the ground
     /// </summary>
     public bool grounded;
+    public float lastGroundTime;
     /// <summary>
     /// True: up against a wall
     /// </summary>
