@@ -20,6 +20,7 @@ public struct PlayerState
     /// True: in air and intends to be going up
     /// </summary>
     public bool jumping;
+    public bool jumpConsumed;
     /// <summary>
     /// True: in air and intends to be going down
     /// </summary>

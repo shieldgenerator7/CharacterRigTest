@@ -8,6 +8,23 @@ public class PlayerController : MonoBehaviour
     public delegate void OnPlayerStateChanged(PlayerState playerState);
     public event OnPlayerStateChanged onPlayerStateChanged;
 
+    private Rigidbody2D rb2d;
+
+    public void Start()
+    {
+        rb2d = GetComponent<Rigidbody2D>();
+    }
+
+    public void FixedUpdate()
+    {
+        if (rb2d.velocity.y <= 0 && playerState.jumping)
+        {
+            playerState.jumping = false;
+            playerState.falling = !playerState.grounded;
+            onPlayerStateChanged?.Invoke(playerState);
+        }
+    }
+
     public void processInputState(InputState inputState)
     {
         //Movement
@@ -18,9 +35,13 @@ public class PlayerController : MonoBehaviour
         //Jumping
         if (playerState.jumping != inputState.jump)
         {
-            if (!playerState.jumping && inputState.jump && playerState.grounded)
+            if (!playerState.jumping && inputState.jump
+                && playerState.grounded
+                && !playerState.jumpConsumed
+                )
             {
                 playerState.jumping = true;
+                playerState.jumpConsumed = true;
                 playerState.falling = false;
                 //playerState.grounded = true;
             }
@@ -32,6 +53,10 @@ public class PlayerController : MonoBehaviour
                     playerState.falling = true;
                 }
             }
+        }
+        if (!inputState.jump)
+        {
+            playerState.jumpConsumed = false;
         }
         //Transforming
         if (playerState.grounded)
