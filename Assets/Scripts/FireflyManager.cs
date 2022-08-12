@@ -34,7 +34,7 @@ public class FireflyManager : MonoBehaviour
     {
         updateFireflyJob = new UpdateFireflyJob()
         {
-            moveSpeed = moveSpeed,
+            moveSpeed = this.moveSpeed,
             jobDeltaTime = Time.deltaTime,
             time = Time.time,
             seed = System.DateTimeOffset.Now.Millisecond,
@@ -61,6 +61,7 @@ public class FireflyManager : MonoBehaviour
             Unity.Mathematics.Random randomGen = new Unity.Mathematics.Random(
                 (uint)(index * time + 1 + seed)
                 );
+            float primerFloat = randomGen.NextFloat(-1.0f, 1.0f);//call it once first just to prime it
             Vector2 moveDir = new Vector2(
                 randomGen.NextFloat(-1.0f, 1.0f),
                 randomGen.NextFloat(-1.0f, 1.0f)
